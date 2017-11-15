@@ -1,0 +1,61 @@
+
+.react-datepicker__day-name, .react-datepicker__day {
+  color: #000;
+  display: inline-block;
+  width: 2.7rem;
+  line-height: 2.7rem;
+  text-align: center;
+  margin: 0.166rem;
+  font-size: 14px;
+}
+
+.react-datepicker__current-month{
+  font-size: 14px;
+}
+
+.align-fl-center{
+  display: flex;
+  align-self: center;
+}
+
+.transactions-history{
+  &__container{
+    position: relative;
+    &.active{
+      .transactions-history__list{
+        display: block;
+      }
+    }
+  }
+  &__block{
+    width: 100%;
+    height: 100%;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__list{
+    position: absolute;
+    display: none;
+    top:40px;
+    left: 0;
+    width: 100%;
+    padding: 10px 8px 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 2px solid #e8ecf1;
+    border-radius: 20px;
+    background: #fff;
+    z-index: 15;
+    li{
+      list-style: none;
+      &:hover{
+        cursor: pointer;
+        color: #00b4e0;
+      }
+    }
+  }
+}

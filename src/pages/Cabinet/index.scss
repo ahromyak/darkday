@@ -1,0 +1,37 @@
+.cabinet-statistic-wrap{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  flex-wrap: wrap;
+  background: #f9fafc;
+}
+
+.depCompleted{
+  display: none;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  color: #101010;
+  background: rgba(255,255,255,0.6);
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  &:hover{
+    cursor: pointer;
+  }
+  &>p{
+    display: flex;
+    align-self: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.completed{
+  .depCompleted{
+    display: flex;
+  }
+}

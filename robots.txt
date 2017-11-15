@@ -1,0 +1,14 @@
+User-Agent: *
+
+Disallow: /cabinet
+Disallow: /promo
+Disallow: /referral
+Disallow: /settings
+Disallow: /history
+Disallow: /withdraw
+Disallow: /withdrawwallet
+Disallow: /codemap
+Disallow: /qrcodevalidation
+Disallow: /depositapproval/*/*
+Disallow: /passwordcreate
+Disallow: /reinvest

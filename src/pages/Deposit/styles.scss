@@ -1,0 +1,817 @@
+.depositBlock {
+  border-top: 1px solid #e8ecf1;
+  width: 100%;
+}
+
+.deposit {
+  &-head {
+    display: flex;
+    //justify-content: flex-start;
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-bottom: 13px;
+  }
+  &-step {
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #1fd7ff;
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+    line-height: 27px;
+  }
+  &-back{
+    box-shadow: none;
+    background: #fcfcfc;
+    border: 1px solid #e5e5e5;
+    border-radius: 25px;
+    padding: 7px;
+    &:hover{
+      background: darken(#fcfcfc, 15%);
+    }
+  }
+  &-title {
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: #333333;
+    padding-left: 33px;
+  }
+}
+
+.deposit-step1__container {
+  display: flex;
+  justify-content: center;
+}
+
+.deposit-left-block {
+  width: calc(100% - 546px);
+}
+
+.deposit-blue {
+  background: linear-gradient(135deg, #019ba5 0%, #1575bf 100%);
+}
+
+.deposit-purple {
+  background: linear-gradient(135deg, #d7497d 0%, #d7497d 100%);
+}
+
+.deposit-orange {
+  background: linear-gradient(135deg, #ce7e36 0%, #e6521e 100%);
+}
+
+.deposit-checkbox.checked {
+  width: 61px;
+  height: 61px;
+  background: url("/assets/images/svg/deposit-checked.svg") no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.deposit-checkbox {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #00d2ff;
+  background-size: contain;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.depositBlock.disabled{
+  position: relative;
+  &>.disabled__block{
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 2;
+    opacity: 0.8;
+    background: #fff;
+  }
+}
+
+.deposit-plan {
+  &-1 {
+    width: 516px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 22px 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    &:hover{
+      cursor: pointer;
+    }
+    p {
+      margin: 0;
+    }
+    .deposit-label {
+      position: absolute;
+      transform: rotate(45deg);
+      //top: -9px;
+      //right: -36px;
+      top: -14px;
+      right: -68px;
+      &__rate {
+        background: #00d2ff;
+        padding: 25px 70px 0px;
+        p {
+          font-family: "Open Sans";
+          font-weight: 600;
+          color: #fff;
+          font-size: 30px;
+          text-align: center
+        }
+      }
+      &__descr {
+        font-size: 11px;
+        color: #fff;
+        font-family: "Open Sans";
+        font-weight: 400;
+        text-align: center;
+        padding: 3px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__checkbox {
+    width: 99px;
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    width: calc(100% - 99px);
+  }
+  &__top-title {
+    color: #fff;
+    font-size: 18px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__rates-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__rate {
+    p {
+      color: #fff;
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 44px;
+    }
+  }
+  &__rate-descr {
+    color: #fff;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 7px;
+    padding-left: 5px;
+  }
+  &__descr {
+    p {
+      color: #fff;
+      font-family: "Open Sans";
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
+}
+
+.cabinet-invest-tabs{
+  .invest-tab{
+    border-radius: 9px;
+    padding: 25px 20px;
+    &.deposit-blue{
+      background: linear-gradient(135deg, #019ba5 0%, #1575bf 100%);
+      .slimScrollBar{
+        background: linear-gradient(135deg, #019ba5 0%, #1575bf 100%)!important;
+      }
+      .calc_daily{
+        background: #019ba5;
+        &:nth-child(2n){
+          background: #1575bf;
+        }
+      }
+    }
+    &.deposit-purple{
+      background: linear-gradient(135deg, #d7497d 0%, #d7497d 100%);
+      .calculator_table_header{
+        background: linear-gradient(135deg, #a23b61 0%, #c11e5a 100%);
+      }
+      .slimScrollBar{
+        background: linear-gradient(135deg, #d7497d 0%, #d7497d 100%)!important;
+      }
+      .calc_daily{
+        background: #d82f75!important;
+        &:nth-child(2n){
+          background: #e85592!important;
+        }
+      }
+    }
+    &.deposit-orange{
+      background: linear-gradient(135deg, #ce7e36 0%, #e6521e 100%);
+      .slimScrollBar{
+        background: linear-gradient(135deg, #ce7e36 0%, #e6521e 100%)!important;
+      }
+      .calc_daily{
+        background: #ce7e36!important;
+        &:nth-child(2n){
+          background: #e6521e!important;
+        }
+      }
+    }
+  }
+}
+
+.deposit-right-block  .cabinet-invest-tabs-row{
+  height: 495px;
+}
+
+.deposit-right-block {
+  width: 546px;
+  .cabinet-invest-tabs {
+    margin-left: 26px;
+    width: 516px;
+    height: 433px;
+    //background: linear-gradient(135deg, #019ba5 0%, #1575bf 100%);
+    border: 2px solid #fff;
+    //border-radius: 9px;
+    //padding: 25px 20px;
+    display: inline-block;
+    position: fixed;
+    top: 102px;
+    @media(max-width: 1199px){
+      width: 380px;
+      right: 20px;
+    }
+    @media(max-width: 1050px){
+      display: none;
+    }
+    .invest-tab {
+      display: none;
+      position: relative;
+      &.visible{
+        display: block;
+      }
+      .invest-insurance-img{
+        position: absolute;
+        top: -26px;
+        right: 10px;
+      }
+      .invest-insurance {
+        padding: 10px 0;
+        position: absolute;
+        top: -40px;
+        right: 17%;
+        margin-left: -140px;
+        width: 140px;
+        height: 140px;
+        display: block;
+        background: url("/assets/images/shield.png") top center no-repeat;
+        span {
+          display: block;
+          color: #000000;
+          font-size: 14px;
+          font-weight: 700;
+          text-align: center;
+          text-transform: uppercase;
+          margin-bottom: 0;
+          &.insurance-percent {
+            font-size: 50px;
+            position: relative;
+            color: #000000;
+            font-weight: 700;
+            line-height: 40px;
+            margin: 20px 0 0 -15px;
+            span {
+              position: absolute;
+              font-size: 14px;
+              top: -10px;
+              right: 20px;
+            }
+          }
+        }
+      }
+      .invest-tab-block {
+        width: 100%;
+        float: left;
+      }
+      .invest-left {
+        width: 100%;
+        height: 220px;
+        position: relative;
+        .invest-tab-name {
+          font-size: 24px;
+          color: #ffffff;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin: 5px 0 10px 0;
+          line-height: 20px;
+        }
+        .invest-tab-profit {
+          line-height: 40px;
+          clear: both;
+          margin-bottom: 15px;
+          font-size: 50px;
+          font-weight: 700;
+          text-transform: uppercase;
+          position: relative;
+          color: #ffffff;
+          span {
+            position: absolute;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            top: -10px;
+            margin-left: 5px;
+            &:nth-child(2) {
+              bottom: -10px;
+              top: auto;
+            }
+          }
+        }
+        .invest-tab-total {
+          color: #ffffff;
+          font-weight: 400;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 0;
+          margin-top: -5px;
+          height: 23px;
+          span {
+            font-size: 13px;
+            top: 5px;
+            position: absolute;
+            left: 0;
+            //background: #3CA2C0;
+            z-index: 1;
+            &:nth-child(2) {
+              background: transparent;
+              width: 110px;
+              font-weight: 200;
+              font-size: 18px;
+              top: -5px;
+              position: absolute;
+              right: 0;
+              left: auto;
+              display: block;
+              padding-left: 5px;
+              b {
+                font-size: 24px;
+                font-weight: 200;
+              }
+            }
+          }
+          &:after {
+            content: '';
+            display: block;
+            width: calc(100% - 110px);
+            position: absolute;
+            right: 110px;
+            bottom: 2px;
+            border-bottom: 1px dotted #ffffff;
+          }
+        }
+      }
+      .invest-right {
+        width: 100%;
+
+        .invest-table {
+          border-radius: 5px;
+          overflow: hidden;
+          .calculator_table_header {
+            background: #7fbfd6;
+            text-align: center;
+            width: 100%;
+            height: 20px;
+            font-size: 11px;
+            color: #fff;
+            line-height: 20px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            overflow: hidden;
+
+            & > span {
+              display: block;
+              float: left;
+              text-align: right;
+              padding-right: 10px;
+
+              &:nth-child(1) {
+                width: 25%;
+              }
+              &:nth-child(2) {
+                width: 30%;
+              }
+              &:nth-child(3) {
+                width: 45%;
+              }
+            }
+          }
+          .calculator {
+            height: 210px;
+            margin-bottom: 5px;
+            .calc_daily {
+              padding: 0;
+              width: 100%;
+              height: 20px;
+              display: block;
+              background: #5aabcb;
+              &:nth-child(2n) {
+                background: #47a2c7;
+              }
+
+              & > div {
+                font-size: 14px;
+                text-align: right;
+                padding-right: 10px;
+                color: #fff;
+                display: block;
+                float: left;
+                overflow: hidden;
+              }
+              .calc_day {
+                width: 25%;
+              }
+              .calc_deposit {
+                width: 30%;
+              }
+              .calc_profit {
+                font-weight: bold;
+                width: 25%;
+              }
+              .calc_total {
+                font-weight: bold;
+                width: 20%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.deposit-currency {
+  &__item {
+    width: 142px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 3px;
+    &.disabled{
+      //display: none;
+      &:hover{
+        cursor: default;
+        .deposit-currency__button{
+          background: rgba(0,0,0,0.1);
+        }
+      }
+    }
+    //border: 1px solid transparent;
+    &:hover{
+      cursor: pointer;
+      .deposit-currency__button{
+        background: rgba(0,0,0,0.1);
+      }
+    }
+    &.active{
+      .deposit-currency__button{
+        background: rgba(0,0,0,0.1);
+      }
+    }
+  }
+  &__title {
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+  &__val {
+    font-family: "Open Sans";
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+
+  }
+  &__button {
+    border: 1px solid #e8ecf1;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 18px;
+    img {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.sum-picker {
+  &__pills-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+
+  }
+  &__pills-container-bordered {
+    border-radius: 31px;
+    border: 1px solid #e5eaed;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    .sum-picker__label {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 8px;
+      line-height: 12px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #e6be1e;
+      padding: 0 12px;
+      white-space: nowrap;
+    }
+  }
+  &__pill {
+    width: 90px;
+    border: 2px solid #00d2ff;
+    line-height: 40px;
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 16px;
+    color: #000;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    .sum-picker__label{
+      display: none;
+    }
+    &.vissible{
+      .sum-picker__label{
+        display: block;
+      }
+    }
+    &.active {
+      background: #00d2ff;
+      color: #fff;
+    }
+    &:hover {
+      background: #00d2ff;
+      color: #fff;
+      cursor: pointer;
+    }
+    &.popular {
+      position: relative;
+      .sum-picker__label {
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 8px;
+        line-height: 12px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        color: #fff;
+        background: #00b27f;
+        padding: 0 6px;
+        white-space: nowrap;
+      }
+    }
+    &.people_choice {
+      position: relative;
+      .sum-picker__label {
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 8px;
+        line-height: 12px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        color: #fff;
+        background: #f7931f;
+        padding: 0 6px;
+        white-space: nowrap;
+      }
+    }
+    &.recomended {
+      position: relative;
+      .sum-picker__label {
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 8px;
+        line-height: 12px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        color: #fff;
+        background: #e6511e;
+        padding: 0 6px;
+        white-space: nowrap;
+      }
+    }
+    p {
+      text-align: center;
+      margin: 0;
+    }
+  }
+  &__button {
+    padding-top: 25px;
+    button {
+      width: 100%;
+      border: none;
+      background: #00d2ff;
+      color: #fff;
+      font-family: "Open Sans";
+      font-weight: normal;
+      font-size: 18px;
+      border-radius: 27px;
+      text-align: center;
+      line-height: 50px;
+      text-transform: uppercase;
+      &:hover {
+        background: darken(#00d2ff, 10%);
+      }
+    }
+  }
+}
+
+.sum-picker {
+  &__wrap {
+    border-radius: 31px;
+    border: 2px solid #e5eaed;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    textarea:focus,
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="date"]:focus,
+    input[type="month"]:focus,
+    input[type="time"]:focus,
+    input[type="week"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="color"]:focus,
+    .uneditable-input:focus {
+      border-color: transparent;
+      box-shadow: none;
+      outline: 0 none;
+    }
+  }
+  &__minus {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: url("/assets/images/minus-sign.svg") no-repeat #e5eaed;
+    background-position: center;
+    transition: 0.4s;
+    display: flex;
+    align-self: center;
+    &:hover,&:active{
+      cursor: pointer;
+      background: url("/assets/images/minus-sign.svg") no-repeat #d5d9db;
+      background-position: center;
+    }
+  }
+  &__plus {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: url("/assets/images/plus-sign.svg") no-repeat #e5eaed;
+    background-position: center;
+    transition: 0.4s;
+    display: flex;
+    align-self: center;
+    &:hover,&:active{
+      cursor: pointer;
+      background: url("/assets/images/plus-sign.svg") no-repeat #d5d9db;
+      background-position: center;
+    }
+  }
+  &__value {
+    width: calc(100% - 56px);
+    text-align: center;
+    font-size: 30px;
+    font-family: "Open Sans";
+    font-weight: normal;
+    border: none;
+  }
+}
+
+.depositBlock-left{
+padding-left: 60px;
+  padding-bottom: 15px;
+}
+
+.deposit__phone{
+  width: 100%;
+  border-radius: 31px;
+  border: 2px solid #d5d9db;
+  padding: 9px 20px;
+  margin-bottom: 12px;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.deposit__explain{
+  font-size: 12px;
+  a{
+    color: #00d2ff;
+  }
+}
+
+.deposit__flex-container{
+  display: flex;
+  justify-content: space-between;
+  //flex-direction: row-reverse;
+}
+
+.deposit-currency__container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.depositBlock.disabled .deposit-currency__container,.depositBlock.disabled .depositBlock__pills-list,.depositBlock.disabled .depositBlock__plans-list{
+  display: none;
+}
+
+
+
+@keyframes fadeOutNone {
+  from {
+    opacity: 1;
+    overflow: hidden;
+  }
+
+  30%{
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  to {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.fadeOutNone {
+  -webkit-animation-name: fadeOutNone;
+  animation-name: fadeOutNone;
+}
+
+.currencys_list-deposit{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.invest-tab__descr{
+  color: #fff;
+}
+
+.wspre{
+  white-space: pre;
+}

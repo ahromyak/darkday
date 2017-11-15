@@ -1,0 +1,78 @@
+[
+  {
+    'group': 'about',
+    'list': [
+      {
+        'name': 'About',
+        'path': '/about'
+      },
+      {
+        'name': 'Team',
+        'path': '/team'
+      },
+      {
+        'name': 'Strategy',
+        'path': '/strategy'
+      }
+    ]
+  },
+  {
+    'group': 'investors',
+    'list': [
+      {
+        'name': 'Investment plan',
+        'path': '/investment-plan'
+      },
+      {
+        'name': 'Cash-in',
+        'path': '/cash-in'
+      },
+      {
+        'name': 'Cash-out',
+        'path': '/cash-out'
+      },
+      {
+        'name': 'Guarantees',
+        'path': '/guarantees'
+      }
+    ]
+  },
+  {
+    'group': 'program',
+    'list': [
+      {
+        'name': 'Program for all',
+        'path': '/program-for-all'
+      },
+      {
+        'name': 'Investors',
+        'path': '/program-investors'
+      },
+      {
+        'name': 'Official representations',
+        'path': '/official-representations'
+      }
+    ]
+  },
+  {
+    'group': 'plan',
+    'list': [
+      {
+        'name': 'Financial plans',
+        'path': '/finance-plans'
+      },
+      {
+        'name': 'Internal processes',
+        'path': '/internal-process'
+      },
+      {
+        'name': 'Expansion of the company's activities',
+        'path': '/expansion'
+      },
+      {
+        'name': 'Organization of work with customers and partners',
+        'path': '/work-with-clients'
+      }
+    ]
+  }
+]
